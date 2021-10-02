@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">4SureWeather</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">4Sure Weather</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_history">History</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="API_KEY">3c2c9119fd96f5765412b2eb67d81316</string>
+    <string name="google_map_api_key">AIzaSyCdwUJvQjWQzUR5VRbdxDPXuE48HIbBkiQ</string>
+
+
+</resources>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_one"
+    android:id="@+id/main_more_details_layout"
+    tools:context=".ui.weather.MoreDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/mainLayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="1dp">
+
+
+            <LinearLayout
+                android:id="@+id/main_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:layout_marginStart="15sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="ToggleButton" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="City"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+
+                        <TextView
+                            android:id="@+id/txtCityName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-condensed"
+                            android:maxWidth="180dp"
+                            android:maxLength="100"
+                            android:padding="0dp"
+                            android:singleLine="false"
+                            android:text="Midrand"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/txtBigTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="false"
+                            android:text="25"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="45dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:visibility="visible"
+                        android:layout_marginEnd="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Country"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/txtCountryName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="false"
+                            android:text="South Africa"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Pressure"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+
+                        <TextView
+                            android:id="@+id/txtPressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-condensed"
+                            android:maxWidth="180dp"
+                            android:maxLength="100"
+                            android:padding="0dp"
+                            android:singleLine="false"
+                            android:text="1025"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Date"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/txtDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="false"
+                            android:text="21-May-2021"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:visibility="visible"
+                        android:layout_marginEnd="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="FellsLike"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/txtFells"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="false"
+                            android:text="1.0"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Main Information"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Temperature"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+
+                        <TextView
+                            android:id="@+id/txtTemp_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-condensed"
+                            android:maxWidth="180dp"
+                            android:maxLength="100"
+                            android:padding="0dp"
+                            android:singleLine="false"
+                            android:text="6"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Temp Min"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txtTempMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="false"
+                            android:text="-24"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginEnd="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Temp Max"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txtTempMax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:singleLine="false"
+                            android:text="85"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Weather Information"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.35"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Main"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/txtMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-condensed"
+                            android:maxWidth="180dp"
+                            android:maxLength="100"
+                            android:maxLines="2"
+                            android:padding="0dp"
+                            android:singleLine="false"
+                            android:text="Clouds"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Description"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/txtDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:maxLines="2"
+                            android:singleLine="false"
+                            android:text="overcast clouds"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginEnd="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Icon"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/imgIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:src="@drawable/clear"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_favourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="visible"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_baseline_add_circle_outline_24"
+            app:iconTint="@color/white"
+            android:backgroundTint="@color/light_sky_blue"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainLayout_1"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
